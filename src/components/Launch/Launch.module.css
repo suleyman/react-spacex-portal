@@ -5,7 +5,6 @@
   background-color: #0d1117;
   border-radius: 6px;
   padding: 15px;
-  padding-right: 100px;
   display: block;
   color: var(--white);
   text-decoration: none;
@@ -19,17 +18,43 @@
   transition: all 100ms ease-in;
 }
 
+.header {
+  display: flex;
+  align-items: center;
+}
+
+.name {
+  display: inline-block;
+  margin-bottom: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
 .description {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   font-size: 12px;
   margin-bottom: 0;
+  margin-top: 10px;
 }
 
 .date {
-  position: absolute;
-  right: 15px;
-  top: 15px;
   font-size: 10px;
+  margin-left: auto;
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .launch {
+    padding-right: 15px;
+  }
+  .name {
+    font-size: 12px;
+  }
+  .description {
+    font-size: 10px;
+    margin-top: 15px;
+  }
 }
