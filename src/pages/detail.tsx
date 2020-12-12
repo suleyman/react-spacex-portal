@@ -19,7 +19,7 @@ const Detail: FunctionComponent = () => {
       setDetail(response.data);
       setLoading(false);
     });
-  }, [id, detail]);
+  }, [id]);
 
   return (
     <div className="page-detail">
@@ -29,7 +29,7 @@ const Detail: FunctionComponent = () => {
         ) : (
           <div>
             <h1>{detail.name}</h1>
-            {renderYoutubeVideo(detail.links.youtube_id)}
+            {renderYoutubeVideo(detail?.links?.youtube_id)}
             <pre>{JSON.stringify(detail, null, 2)}</pre>
           </div>
         )}
