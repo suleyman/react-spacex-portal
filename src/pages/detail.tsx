@@ -19,8 +19,7 @@ const Detail: FunctionComponent = () => {
       setDetail(response.data);
       setLoading(false);
     });
-    console.log(detail);
-  }, [id]);
+  }, [id, detail]);
 
   return (
     <div className="page-detail">
@@ -45,6 +44,7 @@ function renderYoutubeVideo(videoId: string) {
       <iframe
         width="560"
         height="315"
+        title="youtube video"
         src={`https://www.youtube.com/embed/${videoId}`}
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen={false}
