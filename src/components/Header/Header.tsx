@@ -17,9 +17,9 @@ const Header: FunctionComponent = () => {
                 </Link>
               </li>
               <li className="nav-item">
-                <button className="nav-link disabled" aria-disabled="true">
+                <Link to="/ " className="nav-link disabled" aria-disabled="true">
                   Disabled
-                </button>
+                </Link>
               </li>
             </ul>
           </div>

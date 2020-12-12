@@ -8,8 +8,8 @@ import "./App.css";
 const App: FunctionComponent = () => {
   return (
     <Fragment>
-      <Header />
       <Router>
+        <Header />
         <Switch>
           <Route exact path="/" component={IndexPage} />
           <Route path="/detail/:id" component={DetailPage} />
