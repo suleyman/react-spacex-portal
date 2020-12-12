@@ -9,7 +9,7 @@ const Header: FunctionComponent = () => {
       <div className="container">
         <nav className={`${styles.navbar} navbar navbar-expand-lg navbar-dark bg-dark px-3`}>
           <Link to="/" className="navbar-brand">
-            <Logo />
+            SpaceX Portal 🚀
           </Link>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
