@@ -1,29 +1,25 @@
 import { FunctionComponent } from "react";
+import { Link } from "react-router-dom";
 
 const Header: FunctionComponent = () => {
   return (
     <header className="header my-4">
       <div className="container">
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark px-3">
-          <a className="navbar-brand" href="#">
+          <Link to="/" className="navbar-brand">
             SpaceX 🚀
-          </a>
+          </Link>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">
+                <Link to="/" className="nav-link active" aria-current="page">
                   Home
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Link
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link disabled" href="#" aria-disabled="true">
+                <button className="nav-link disabled" aria-disabled="true">
                   Disabled
-                </a>
+                </button>
               </li>
             </ul>
           </div>
