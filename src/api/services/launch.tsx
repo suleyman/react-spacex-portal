@@ -6,6 +6,9 @@ const LaunchService = {
   getAllLaunches(): Promise<AxiosResponse<ILaunch[]>> {
     return HTTP.get("/launches");
   },
+  getOneLaunch(id: string): Promise<AxiosResponse<ILaunch>> {
+    return HTTP.get(`/launches/${id}`);
+  },
 };
 
 export default LaunchService;
