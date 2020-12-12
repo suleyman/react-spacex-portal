@@ -14,11 +14,16 @@ const IndexPage: FunctionComponent = () => {
 
   return (
     <div className="page-index-page">
-      <h1>Index Page</h1>
-      <div className="launches">
-        {launches.map((launch) => {
-          return <Launch launchData={launch} key={launch.id} />;
-        })}
+      <div className="container">
+        <div className="launches row">
+          {launches.map((launch) => {
+            return (
+              <div className="col-lg-12 mb-4" key={launch.id}>
+                <Launch launchData={launch} />
+              </div>
+            );
+          })}
+        </div>
       </div>
     </div>
   );
