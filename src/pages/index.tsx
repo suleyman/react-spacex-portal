@@ -11,7 +11,7 @@ const IndexPage: FunctionComponent = () => {
   useEffect(() => {
     setLoading(true);
     LaunchService.getAllLaunches().then((response) => {
-      setLaunches(response.data);
+      setLaunches(response.data.reverse());
       setLoading(false);
     });
   }, []);
