@@ -19,7 +19,12 @@ const Header: FunctionComponent = () => {
               </li>
               <li className="nav-item">
                 <Link to="/ " className="nav-link disabled" aria-disabled="true">
-                  Disabled
+                  Launches
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/ " className="nav-link disabled" aria-disabled="true">
+                  About Company
                 </Link>
               </li>
             </ul>
