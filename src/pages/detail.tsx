@@ -21,6 +21,21 @@ const Detail: FunctionComponent = () => {
     });
   }, [id]);
 
+  const renderYoutubeVideo = () => {
+    if (detail?.links?.youtube_id) {
+      return (
+        <iframe
+          width="100%"
+          height="500"
+          title="youtube video"
+          src={`https://www.youtube.com/embed/${detail.links.youtube_id}`}
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen={false}
+        ></iframe>
+      );
+    }
+  };
+
   return (
     <div className="page-detail">
       <div className="container">
@@ -29,28 +44,13 @@ const Detail: FunctionComponent = () => {
         ) : (
           <div>
             <h1>{detail.name}</h1>
-            {renderYoutubeVideo(detail?.links?.youtube_id)}
-            <pre>{JSON.stringify(detail, null, 2)}</pre>
+            <h5 className="my-4">{detail.details}</h5>
+            {detail?.links?.youtube_id && <section className="video">{renderYoutubeVideo()}</section>}
           </div>
         )}
       </div>
     </div>
   );
 };
-
-function renderYoutubeVideo(videoId: string) {
-  if (videoId) {
-    return (
-      <iframe
-        width="560"
-        height="315"
-        title="youtube video"
-        src={`https://www.youtube.com/embed/${videoId}`}
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen={false}
-      ></iframe>
-    );
-  }
-}
 
 export default Detail;
